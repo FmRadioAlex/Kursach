@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+            <children>
+                <TabPane prefHeight="400.0" prefWidth="756.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                        <Tab text="Работа процессов">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="313.0" prefWidth="710.0">
+                                    <children>
+                                        <TableView fx:id="tableProcesses" prefHeight="347.0" prefWidth="761.0">
+                                            <columns>
+                                                <TableColumn fx:id="idColumn" prefWidth="37.0" text="№" />
+                                                <TableColumn fx:id="nameColumn" prefWidth="105.60003280639648" text="Название" />
+                                                <TableColumn fx:id="timeOfTactsColumn" prefWidth="98.40008544921875" text="Интервал" />
+                                                <TableColumn fx:id="timeInColumn" prefWidth="105.60005187988281" text="Время процесса" />
+                                                <TableColumn fx:id="timeColumn" prefWidth="131.199951171875" text="Время работы проц." />
+                                                <TableColumn fx:id="stateColumn" prefWidth="92.0" text="Статус" />
+                                                <TableColumn fx:id="priorityColumn" prefWidth="73.5999755859375" text="Приоритет" />
+                                                <TableColumn fx:id="sizeColumn" prefWidth="98.400146484375" text="Кол-во памяти" />
+                                            </columns>
+                                        </TableView>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                        <Tab text="Выполненные">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="137.0" prefWidth="710.0">
+                                    <children>
+                                        <TableView fx:id="tableConfirmedProcesses" prefHeight="347.0" prefWidth="746.0">
+                                            <columns>
+                                                <TableColumn fx:id="idConfirmedColumn" prefWidth="59.0" text="№" />
+                                                <TableColumn fx:id="nameConfirmedColumn" prefWidth="142.0" text="Название проц." />
+                                                <TableColumn fx:id="timeOfTactsConfirmedColumn" prefWidth="130.0" text="Интервал" />
+                                                <TableColumn fx:id="timeInConfirmedColumn" prefWidth="97.0" text="Время" />
+                                                <TableColumn fx:id="stateConfirmedColumn" prefWidth="100.0" text="Статус" />
+                                                <TableColumn fx:id="priorityConfirmedColumn" minWidth="0.0" prefWidth="86.0" text="Приоритет" />
+                                                <TableColumn fx:id="sizeConfirmedColumn" prefWidth="129.60001220703123" text="Кол-во памяти" />
+                                            </columns>
+                                        </TableView>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                        <Tab text="Не выполненнные">
+                            <content>
+                                <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="346.0" prefWidth="710.0">
+                                    <children>
+                                        <TableView fx:id="tableRejectedProcesses" prefHeight="347.0" prefWidth="746.0">
+                                            <columns>
+                                                <TableColumn fx:id="idRejectedColumn" prefWidth="104.0" text="№" />
+                                                <TableColumn fx:id="nameRejectedColumn" prefWidth="240.0" text="Название" />
+                                                <TableColumn fx:id="stateRejectedColumn" prefWidth="253.0" text="Статус" />
+                                                <TableColumn fx:id="sizeRejectedColumn" prefWidth="147.20013427734375" text="Кол-во памяти" />
+                                            </columns>
+                                        </TableView>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                        <Tab fx:id="tabMemory" text="Диапазон памяти">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="468.0" prefWidth="710.0">
+                                    <children>
+                                        <TableView fx:id="tableMemoryBlocks" layoutX="247.0" layoutY="14.0" prefHeight="288.0" prefWidth="223.0">
+                                            <columns>
+                                                <TableColumn fx:id="startMemoryBlockColumn" prefWidth="108.00007629394531" text="Начало" />
+                                                <TableColumn fx:id="endMemoryBlockColumn" prefWidth="107.199951171875" text="Конец" />
+                                            </columns>
+                                        </TableView>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                    </tabs>
+                </TabPane>
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>
